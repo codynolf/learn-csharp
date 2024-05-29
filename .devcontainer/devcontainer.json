@@ -1,5 +1,5 @@
 {
-	"name": "conti development",
+	"name": "learn-csharp",
 	"image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
 	"customizations":
     {

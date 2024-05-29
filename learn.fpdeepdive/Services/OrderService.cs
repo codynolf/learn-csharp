@@ -21,13 +21,14 @@ public static class OrderService {
     public static Order UpdateOrderShipDetails(Order order){
         var shipDetails = ShippingService.GetDetails(order);
         return new Order(
+            items: order.Items,
             customer: order.Customer, 
             shippingState: order.ShippingState, 
             orderNumber: order.OrderNumber, 
             orderDate: order.OrderDate, 
             estimatedArrival: shipDetails.EstimatedArrival, 
             shippingCost: shipDetails.ShippingCost, 
-            total: order.Total)
+            total: order.Total);
 
     }
 
